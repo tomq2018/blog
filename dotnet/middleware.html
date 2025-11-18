@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>中间件 | tomq 文档</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="tomq 最新官方文档翻译">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6b82f87.css" as="style"><link rel="preload" href="/blog/assets/js/app.e7ac393e.js" as="script"><link rel="preload" href="/blog/assets/js/2.eacf488d.js" as="script"><link rel="preload" href="/blog/assets/js/1.1cbc5082.js" as="script"><link rel="preload" href="/blog/assets/js/33.5585beb6.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.3529bcb2.js"><link rel="prefetch" href="/blog/assets/js/11.8e802c1e.js"><link rel="prefetch" href="/blog/assets/js/12.eaba6033.js"><link rel="prefetch" href="/blog/assets/js/13.03a72e64.js"><link rel="prefetch" href="/blog/assets/js/14.a69b86ef.js"><link rel="prefetch" href="/blog/assets/js/15.e40ead57.js"><link rel="prefetch" href="/blog/assets/js/16.9dd77b55.js"><link rel="prefetch" href="/blog/assets/js/17.dc3323dd.js"><link rel="prefetch" href="/blog/assets/js/18.648b10c4.js"><link rel="prefetch" href="/blog/assets/js/19.2a696a53.js"><link rel="prefetch" href="/blog/assets/js/20.89f58454.js"><link rel="prefetch" href="/blog/assets/js/21.31e32fb9.js"><link rel="prefetch" href="/blog/assets/js/22.b378734b.js"><link rel="prefetch" href="/blog/assets/js/23.64ce5501.js"><link rel="prefetch" href="/blog/assets/js/24.5c69dc61.js"><link rel="prefetch" href="/blog/assets/js/25.a22b71ff.js"><link rel="prefetch" href="/blog/assets/js/26.9f4f90d6.js"><link rel="prefetch" href="/blog/assets/js/27.99d02492.js"><link rel="prefetch" href="/blog/assets/js/28.729479f3.js"><link rel="prefetch" href="/blog/assets/js/29.7a08a805.js"><link rel="prefetch" href="/blog/assets/js/3.f74b7660.js"><link rel="prefetch" href="/blog/assets/js/30.071b5830.js"><link rel="prefetch" href="/blog/assets/js/31.9d538409.js"><link rel="prefetch" href="/blog/assets/js/32.4c4f63dc.js"><link rel="prefetch" href="/blog/assets/js/34.554e8322.js"><link rel="prefetch" href="/blog/assets/js/35.29400570.js"><link rel="prefetch" href="/blog/assets/js/36.af10486b.js"><link rel="prefetch" href="/blog/assets/js/37.a7b418ee.js"><link rel="prefetch" href="/blog/assets/js/4.119e5097.js"><link rel="prefetch" href="/blog/assets/js/5.635a7794.js"><link rel="prefetch" href="/blog/assets/js/6.301ea018.js"><link rel="prefetch" href="/blog/assets/js/7.442dabf9.js"><link rel="prefetch" href="/blog/assets/js/vendors~docsearch.06f5d163.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6b82f87.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">tomq 文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tomq的博客" class="dropdown-title"><span class="title">tomq的博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="tomq的博客" class="mobile-dropdown-title"><span class="title">tomq的博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/tomq2018" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tomq的博客" class="dropdown-title"><span class="title">tomq的博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="tomq的博客" class="mobile-dropdown-title"><span class="title">tomq的博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/tomq2018" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>C#</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>.net core</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/dotnet/middleware.html" aria-current="page" class="active sidebar-link">中间件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/dotnet/middleware.html#中间件的类型" class="sidebar-link">中间件的类型</a></li><li class="sidebar-sub-header"><a href="/blog/dotnet/middleware.html#中间件的注册顺序" class="sidebar-link">中间件的注册顺序</a></li><li class="sidebar-sub-header"><a href="/blog/dotnet/middleware.html#中间件和过滤器的区别" class="sidebar-link">中间件和过滤器的区别</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>关系型数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>非关系型数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>消息队列</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>在 .NET Core 里，中间件是处理 HTTP 请求和响应的关键组件，它能够对请求进行预处理，对响应进行后处理。</p> <p>基本概念
+中间件本质上是一个可以处理 HTTP 请求和响应的软件组件，多个中间件可以组合成一个请求处理管道。当有 HTTP 请求到达时，请求会依次经过管道中的每个中间件，每个中间件都有机会对请求进行处理，并且可以决定是否将请求传递给下一个中间件，或者直接返回响应。</p> <p>中间件的工作原理
+请求处理管道就像一个链条，每个中间件都是链条上的一环。请求从管道的一端进入，依次经过各个中间件，最终到达管道的另一端。如果某个中间件返回了响应，那么响应会沿着相反的方向返回，依次经过之前的中间件。</p> <h2 id="中间件的类型"><a href="#中间件的类型" class="header-anchor">#</a> 中间件的类型</h2> <p>内置中间件
+.NET Core 提供了许多内置的中间件，以下是一些常见的内置中间件及其作用：</p> <ul><li>静态文件中间件：用于处理静态文件请求，比如 HTML、CSS、JavaScript 等文件。使用 app.UseStaticFiles() 方法可以启用该中间件。</li> <li>路由中间件：负责将请求路由到相应的控制器和动作方法。使用 app.UseRouting() 和 app.UseEndpoints() 方法来配置路由。</li> <li>认证中间件：用于处理用户认证和授权。可以使用 app.UseAuthentication() 和 app.UseAuthorization() 方法启用认证和授权中间件。
+自定义中间件
+除了使用内置中间件，你还可以创建自定义中间件来满足特定的需求。自定义中间件通常是一个实现了特定接口或遵循特定约定的类。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using System.Threading.Tasks;
+
+// 自定义中间件类
+public class CustomMiddleware
+{
+    private readonly RequestDelegate _next;
+
+    public CustomMiddleware(RequestDelegate next)
+    {
+        _next = next;
+    }
+
+    public async Task InvokeAsync(HttpContext context)
+    {
+        // 请求处理前的逻辑
+        await context.Response.WriteAsync(&quot;请求进入基于类的自定义中间件\n&quot;);
+
+        // 调用下一个中间件
+        await _next(context);
+
+        // 请求处理后的逻辑
+        await context.Response.WriteAsync(&quot;响应离开基于类的自定义中间件\n&quot;);
+    }
+}
+
+// 扩展方法，方便注册中间件
+public static class CustomMiddlewareExtensions
+{
+    public static IApplicationBuilder UseCustomMiddleware(this IApplicationBuilder builder)
+    {
+        return builder.UseMiddleware&lt;CustomMiddleware&gt;();
+    }
+}
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+// 注册自定义中间件
+app.UseCustomMiddleware();
+
+app.Run(async (context) =&gt;
+{
+    await context.Response.WriteAsync(&quot;Hello, World!\n&quot;);
+});
+
+app.Run();
+</code></pre></div><h2 id="中间件的注册顺序"><a href="#中间件的注册顺序" class="header-anchor">#</a> 中间件的注册顺序</h2> <p>中间件的注册顺序非常重要，因为请求会按照中间件的注册顺序依次经过各个中间件。通常，应该按照以下顺序注册中间件：
+1.异常处理中间件：放在最前面，以便捕获后续中间件中可能发生的异常。
+2.静态文件中间件：在路由中间件之前注册，以便处理静态文件请求。
+3.路由中间件：负责将请求路由到相应的控制器和动作方法。
+4.认证和授权中间件：在路由中间件之后注册，以便对路由后的请求进行认证和授权。
+5.自定义中间件：根据具体需求，在合适的位置注册自定义中间件。</p> <h2 id="中间件和过滤器的区别"><a href="#中间件和过滤器的区别" class="header-anchor">#</a> 中间件和过滤器的区别</h2> <p>作用层面</p> <ul><li>中间件
+中间件主要负责处理整个 HTTP 请求和响应的生命周期，它处于请求处理管道的底层，在请求到达应用程序的具体处理逻辑之前和响应返回客户端之前进行操作。它可以对请求进行预处理，例如记录请求日志、处理跨域请求、解析请求体等；也可以对响应进行后处理，例如压缩响应内容、添加响应头信息等。</li> <li>过滤器
+过滤器主要用于在控制器动作执行的前后进行特定操作，它更侧重于应用程序的业务逻辑层面。过滤器可以对控制器的输入参数进行验证、在动作执行前后进行日志记录、处理异常、进行授权验证等。</li></ul> <p>使用场景</p> <ul><li>中间件
+<ul><li>全局请求处理：对所有请求进行统一处理，例如全局的日志记录、请求缓存、错误处理等。</li> <li>协议级别的处理：处理与 HTTP 协议相关的操作，如 HTTPS 重定向、跨域资源共享（CORS）配置等。</li> <li>请求的早期处理：在请求进入应用程序的具体处理逻辑之前进行预处理，如请求的解析、身份验证的初步检查等。</li></ul></li> <li>过滤器
+<ul><li>控制器和动作的特定处理：针对特定的控制器或动作进行处理，例如对某些控制器的输入参数进行验证、对某些敏感操作进行授权检查等。</li> <li>动作执行前后的逻辑：在控制器动作执行前后添加额外的逻辑，如记录动作执行时间、在动作执行前进行数据初始化等。</li> <li>异常处理：捕获和处理控制器动作中抛出的异常，提供统一的异常处理机制。</li></ul></li></ul> <p>实现方式</p> <ul><li><p>中间件</p> <ul><li>基于委托的中间件：使用 <code>RequestDelegate</code> 委托来处理请求，通过 <code>app.Use</code> 方法注册。</li> <li>基于类的中间件：创建一个实现特定接口的类，通过 <code>app.UseMiddleware</code> 方法注册。</li></ul></li> <li><p>过滤器</p> <ul><li>内置过滤器：.NET Core 提供了多种内置过滤器，如 <code>AuthorizeFilter</code> 用于授权验证、<code>ExceptionFilter</code> 用于异常处理等，可以通过在控制器或动作上添加特性来使用。</li> <li>自定义过滤器：创建一个实现特定过滤器接口（如 <code>IActionFilter</code>、<code>IExceptionFilter</code> 等）的类，然后在控制器或动作上应用该过滤器。</li></ul></li></ul> <p>执行顺序</p> <ul><li>中间件：中间件按照注册的顺序依次执行，请求从第一个中间件开始，依次经过后续的中间件，直到到达请求处理的终点。响应则按照相反的顺序返回，依次经过之前的中间件。</li> <li>过滤器：过滤器的执行顺序由其类型和注册方式决定。不同类型的过滤器（如授权过滤器、资源过滤器、动作过滤器等）有固定的执行顺序，同一类型的过滤器可以通过设置 <code>Order</code> 属性来指定执行顺序。</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/csharp/gc.html" class="prev">
+        GC
+      </a></span> <span class="next"><a href="/blog/mysql/mysql.html">
+        MySQL面试题
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.e7ac393e.js" defer></script><script src="/blog/assets/js/2.eacf488d.js" defer></script><script src="/blog/assets/js/1.1cbc5082.js" defer></script><script src="/blog/assets/js/33.5585beb6.js" defer></script>
+  </body>
+</html>
